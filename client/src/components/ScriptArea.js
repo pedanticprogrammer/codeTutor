@@ -122,7 +122,7 @@ class ScriptArea extends Component {
             </Button>
           )}
 
-          {!owner && this.props.selectedProject.forkedFrom && (
+          {owner && this.props.selectedProject.forkedFrom && (
             /* Submit As Solution Button */
             <Button
               disabled={fileSaving}
