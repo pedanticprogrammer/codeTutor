@@ -24,4 +24,4 @@ CMD ["npm", "start"]
 
 #Expose port for app, and make /code a volume to persist data between containers
 EXPOSE 3001
-VOLUME /code
+VOLUME /code/projects

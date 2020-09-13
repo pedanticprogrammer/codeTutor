@@ -13,7 +13,7 @@ const target = document.querySelector('#Root')
 
 render(
   <Provider store={configureStore()}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App />
     </BrowserRouter>
   </Provider>,
