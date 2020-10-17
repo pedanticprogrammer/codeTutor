@@ -6,7 +6,7 @@ WORKDIR /code
 
 #Copy all project files
 #.env file is not provided, and must be manually generated.
-COPY . /code
+COPY ./code /code
 
 #Install Java
 RUN apt-get update &&\
@@ -22,6 +22,7 @@ RUN apt-get update &&\
     yarn build &&\
     cd /code
 
+COPY ./startup.sh /code
 ENTRYPOINT ["/code/startup.sh"]
 
 #Expose port for app, and make /code a volume to persist data between containers
