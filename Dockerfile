@@ -22,7 +22,7 @@ RUN apt-get update &&\
     yarn build &&\
     cd /code
 
-CMD ["npm", "start"]
+ENTRYPOINT ["/code/startup.sh"]
 
 #Expose port for app, and make /code a volume to persist data between containers
 EXPOSE 3001
